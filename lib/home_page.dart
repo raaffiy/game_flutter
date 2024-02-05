@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                   ),
 
                   // Spacer between text and image
-                  const SizedBox(width: 45),
+                  const SizedBox(width: 30),
 
                   // Image Icon
                   Image.asset(
