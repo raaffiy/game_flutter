@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'box_home.dart';
-import 'tetris_game/tetris_page.dart'; // Import file tetris_page.dart
+import 'tetris_game/tetris_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,13 +17,13 @@ class _HomePageState extends State<HomePage> {
 
   // list of smart devices
   List mySmartDevices = [
-    // [ smartDeviceName, iconPath, page ]
-    ["Chess", "icons/chess.png", null], // Tambahkan nilai null untuk page chess
+    // [ Tittle, Icon, Router ]
+    ["Chess", "icons/chess.png", null],
     [
       "Tetris",
       "icons/tetris.png",
       const GameBoard(),
-    ], // Tambahkan GameBoard() untuk page tetris
+    ],
   ];
 
   @override
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                   ),
 
                   // Spacer between text and image
-                  const SizedBox(width: 30),
+                  const SizedBox(width: 45),
 
                   // Image Icon
                   Image.asset(
@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                     smartDeviceName: mySmartDevices[index][0],
                     iconPath: mySmartDevices[index][1],
                     onTap: () {
-                      // Navigasi ke halaman yang sesuai saat item ditekan
+                      // Navigasi ke halaman yang sesuai saat item ditekan yaitu tetris
                       if (mySmartDevices[index][2] != null) {
                         Navigator.push(
                           context,

@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class HomeBox extends StatelessWidget {
   final String smartDeviceName;
   final String iconPath;
-  final VoidCallback onTap; // Add this line
+  final VoidCallback onTap;
 
   const HomeBox({
     Key? key,
     required this.smartDeviceName,
     required this.iconPath,
-    required this.onTap, // Add this line
+    required this.onTap,
   }) : super(key: key);
 
   @override
@@ -50,9 +50,9 @@ class HomeBox extends StatelessWidget {
 
               // "Mainkan" button
               ElevatedButton(
-                onPressed: onTap, // Change this line
+                onPressed: onTap,
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green, // Set the button color
+                  primary: Colors.green,
                   padding: const EdgeInsets.symmetric(horizontal: 35),
                 ),
                 child: const Text(
