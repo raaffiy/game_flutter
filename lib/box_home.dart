@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class HomeBox extends StatelessWidget {
   final String smartDeviceName;
   final String iconPath;
+  final VoidCallback onTap; // Add this line
 
-  HomeBox({
+  const HomeBox({
     Key? key,
     required this.smartDeviceName,
     required this.iconPath,
+    required this.onTap, // Add this line
   }) : super(key: key);
 
   @override
@@ -48,9 +50,7 @@ class HomeBox extends StatelessWidget {
 
               // "Mainkan" button
               ElevatedButton(
-                onPressed: () {
-                  // Add your play button functionality here
-                },
+                onPressed: onTap, // Change this line
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green, // Set the button color
                   padding: const EdgeInsets.symmetric(horizontal: 35),
