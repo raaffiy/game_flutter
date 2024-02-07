@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'box_home.dart';
 import 'tetris_game/tetris_page.dart';
+import 'chess_game/chess_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,14 +17,10 @@ class _HomePageState extends State<HomePage> {
   final double verticalPadding = 25;
 
   // list of smart devices
-  List mySmartDevices = [
+  List gameBoard = [
     // [ Tittle, Icon, Router ]
-    ["Chess", "icons/chess.png", null],
-    [
-      "Tetris",
-      "icons/tetris.png",
-      const GameBoard(),
-    ],
+    ["Chess", "icons/chess.png", const ChessBoard()],
+    ["Tetris", "icons/tetris.png", const GameBoard()],
   ];
 
   @override
@@ -113,15 +110,15 @@ class _HomePageState extends State<HomePage> {
                 ),
                 itemBuilder: (context, index) {
                   return HomeBox(
-                    smartDeviceName: mySmartDevices[index][0],
-                    iconPath: mySmartDevices[index][1],
+                    smartDeviceName: gameBoard[index][0],
+                    iconPath: gameBoard[index][1],
                     onTap: () {
                       // Navigasi ke halaman yang sesuai saat item ditekan yaitu tetris
-                      if (mySmartDevices[index][2] != null) {
+                      if (gameBoard[index][2] != null) {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => mySmartDevices[index][2],
+                            builder: (context) => gameBoard[index][2],
                           ),
                         );
                       }

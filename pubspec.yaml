@@ -69,6 +69,12 @@ flutter:
     - icons/tetris.png
     - icons/game2.png
     - icons/home.png
+    - icons/bishop.png
+    - icons/king.png
+    - icons/rook.png
+    - icons/knight.png
+    - icons/pawn.png
+    - icons/queen.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
